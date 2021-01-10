@@ -13198,11 +13198,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dot Net MVC\\net-core\\CosmeticShop\\CosmeticShop\\CosmeticShop.csproj",
+      "projectUniqueName": "C:\\Users\\MY PC\\Desktop\\NetCore\\CosmeticShop\\CosmeticShop.csproj",
       "projectName": "CosmeticShop",
-      "projectPath": "D:\\Dot Net MVC\\net-core\\CosmeticShop\\CosmeticShop\\CosmeticShop.csproj",
+      "projectPath": "C:\\Users\\MY PC\\Desktop\\NetCore\\CosmeticShop\\CosmeticShop.csproj",
       "packagesPath": "C:\\Users\\MY PC\\.nuget\\packages\\",
-      "outputPath": "D:\\Dot Net MVC\\net-core\\CosmeticShop\\CosmeticShop\\obj\\",
+      "outputPath": "C:\\Users\\MY PC\\Desktop\\NetCore\\CosmeticShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13220,6 +13220,7 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
           "projectReferences": {}
         }
       },
@@ -13231,6 +13232,7 @@
     },
     "frameworks": {
       "netcoreapp2.2": {
+        "targetAlias": "netcoreapp2.2",
         "dependencies": {
           "EntityFramework": {
             "target": "Package",
@@ -13283,10 +13285,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -13295,7 +13303,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'EntityFramework 6.1.3' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "message": "Package 'EntityFramework 6.1.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
       "libraryId": "EntityFramework",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.2"

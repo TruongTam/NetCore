@@ -103,20 +103,20 @@ namespace CosmeticShop.Controllers
                     _context.SaveChanges();
                 }
             }
-            
-            // Xóa trong AnoCartDetail
-            //List<AnoCartDetail> anocartdetails  = _context.AnoCartDetails.Where(c => c.Product_Id == product.Id).ToList();
-            //if (cartdetails != null)
-            //{
-            //    foreach (var detail in anocartdetails)
-            //    {
-            //        _context.AnoCartDetails.Remove(detail);
-            //        _context.SaveChanges();
-            //    }
-            //}
+
+            //Xóa trong AnoCartDetail
+            List<AnoCartDetail> anocartdetails = _context.AnoCartDetails.Where(c => c.Product_Id == product.Id).ToList();
+            if (cartdetails != null)
+            {
+                foreach (var detail in anocartdetails)
+                {
+                    _context.AnoCartDetails.Remove(detail);
+                    _context.SaveChanges();
+                }
+            }
 
             _context.Products.Remove(product);
-            //_context.SaveChanges();
+            _context.SaveChanges();
         }
         #endregion
 
@@ -448,7 +448,7 @@ namespace CosmeticShop.Controllers
             else { return RedirectToAction("Login");}
         }
 
-        [HttpGet]
+        [HttpPost]
         public IActionResult ProductDelete(int id)
         {
             if (IsLogedIn() == true)

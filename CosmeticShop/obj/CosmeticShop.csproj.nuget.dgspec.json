@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dot Net MVC\\net-core\\CosmeticShop\\CosmeticShop\\CosmeticShop.csproj": {}
+    "C:\\Users\\MY PC\\Desktop\\NetCore\\CosmeticShop\\CosmeticShop.csproj": {}
   },
   "projects": {
-    "D:\\Dot Net MVC\\net-core\\CosmeticShop\\CosmeticShop\\CosmeticShop.csproj": {
+    "C:\\Users\\MY PC\\Desktop\\NetCore\\CosmeticShop\\CosmeticShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dot Net MVC\\net-core\\CosmeticShop\\CosmeticShop\\CosmeticShop.csproj",
+        "projectUniqueName": "C:\\Users\\MY PC\\Desktop\\NetCore\\CosmeticShop\\CosmeticShop.csproj",
         "projectName": "CosmeticShop",
-        "projectPath": "D:\\Dot Net MVC\\net-core\\CosmeticShop\\CosmeticShop\\CosmeticShop.csproj",
+        "projectPath": "C:\\Users\\MY PC\\Desktop\\NetCore\\CosmeticShop\\CosmeticShop.csproj",
         "packagesPath": "C:\\Users\\MY PC\\.nuget\\packages\\",
-        "outputPath": "D:\\Dot Net MVC\\net-core\\CosmeticShop\\CosmeticShop\\obj\\",
+        "outputPath": "C:\\Users\\MY PC\\Desktop\\NetCore\\CosmeticShop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -29,6 +29,7 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
             "projectReferences": {}
           }
         },
@@ -40,6 +41,7 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
           "dependencies": {
             "EntityFramework": {
               "target": "Package",
@@ -92,10 +94,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
