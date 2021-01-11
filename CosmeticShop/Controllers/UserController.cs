@@ -99,19 +99,18 @@ namespace CosmeticShop.Controllers
                 _context.SaveChanges();
                 string content = "Chúc Mừng: " + vm.User.NameLast + " " + vm.User.NameMiddle + " " + vm.User.NameFirst;
                 content += "<br>Đã Đăng Kí Thành Công  ";
-               
-                // content += "<br>Click vô đây xác nhận đăng nhập: https://cosmeticshop20.azurewebsites.net/User/Login";
-                content += "Click vào <a href='https://cosmeticshop20.azurewebsites.net/activate/activate'>link</a> này để kích hoạt tài khoản.";
+                          
+                content += "Click vào <a href='https://localhost:44313/activate/activate'>link</a> này để kích hoạt tài khoản.";
                 const string accountSid = "ACff7a2b137de5ac0d7fe4d1396756abe9";
                 const string authToken = "4d8822f20cfb83f5e8d6f3f16b18c6de";
 
                 TwilioClient.Init(accountSid, authToken);
 
-                var message = MessageResource.Create(
-                    body: vm.User.NameLast + " " + vm.User.NameMiddle + " " + vm.User.NameFirst + " Đã đăng kí tài khoản",
-                    from: new Twilio.Types.PhoneNumber("+12028581210"),
-                    to: new Twilio.Types.PhoneNumber("+84867601320")
-                );
+                //var message = MessageResource.Create(
+                //    body: vm.User.NameLast + " " + vm.User.NameMiddle + " " + vm.User.NameFirst + " Đã đăng kí tài khoản",
+                //    from: new Twilio.Types.PhoneNumber("+12028581210"),
+                //    to: new Twilio.Types.PhoneNumber("+84867601320")
+                //);
                 //bool a = MailHelper.Send(vm.User.Email, vm.User.Email, "Chúc Mừng Bạn Đã Đăng Kí Thành Công", content);
                 if (MailHelper.Send(vm.User.Email, vm.User.Email, "Chúc Mừng Bạn Đã Đăng Kí Thành Công", content))
                 {
