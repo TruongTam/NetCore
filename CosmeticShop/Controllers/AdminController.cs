@@ -76,7 +76,7 @@ namespace CosmeticShop.Controllers
         public void RemoveProduct(Product product)
         {
             // Xóa ảnh
-            RemoveImage(product.Thumbnail);
+           // RemoveImage(product.Thumbnail);
             
             // Xóa các bình luận
             List<Comment> comments = _context.Comments.Where(c => c.Product_Id == product.Id).ToList();
@@ -103,7 +103,13 @@ namespace CosmeticShop.Controllers
                     _context.SaveChanges();
                 }
             }
-
+            //xóa orderdetail
+            List<OrderDetail> orderDetails = _context.OrderDetails.Where(or => or.Product_Id == product.Id).ToList();
+            foreach(OrderDetail x in orderDetails)
+            {
+                _context.OrderDetails.Remove(x);
+                _context.SaveChanges();
+            }
             //Xóa trong AnoCartDetail
             List<AnoCartDetail> anocartdetails = _context.AnoCartDetails.Where(c => c.Product_Id == product.Id).ToList();
             if (cartdetails != null)
@@ -448,7 +454,7 @@ namespace CosmeticShop.Controllers
             else { return RedirectToAction("Login");}
         }
 
-        [HttpPost]
+        [HttpGet]
         public IActionResult ProductDelete(int id)
         {
             if (IsLogedIn() == true)
@@ -456,7 +462,10 @@ namespace CosmeticShop.Controllers
                 Product delete = _context.Products.Where(p => p.Id == id).FirstOrDefault();
                 if (delete != null)
                 {
-                    RemoveProduct(delete);
+                    _context.Products.Remove(delete);
+                    _context.SaveChanges();
+                    //xóa tất cả thông tin liên quan đến products
+                   // RemoveProduct(delete);
                 }
                 return RedirectToAction("ProductsOverview","Admin");
             }

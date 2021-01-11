@@ -150,16 +150,25 @@
         </div>
     </div>
 </div><!-- end of section Mua nhiều xem nhiều -->
+<script>
+    setInterval(function () {
+        var time = Date();
+        var day = time.getDate();
+        var month = time.getMonth();
+        var year = time.getYear();
+        document.getElementById('time1').innerHTML = day + "/" + month + "/"+ year;
+    },1000);
+</script>
 <div class="container-fluid section section--register">
     <div class="container">
         <h1 class="section__title">ĐĂNG KÍ ĐỂ NHẬN THÊM THÔNG TIN TỪ CHÚNG TÔI</h1>
         <div class="row">
             <div class="col-5 register__benefits">
-                <p>Từ ngày <span class="benefits__date">02/10/2019</span>, quý khách hàng khi đăng ký trở thành thành viên của <span class="benefits__date">Cosmetic</span> sẽ nhận được các chương trình ưu đãi và khuyến mãi hấp dẫn:</p>
+                <p>Từ ngày <span class="benefits__date"><span id="time1">31/01/2021</span></span>, quý khách hàng khi đăng ký trở thành thành viên của <span class="benefits__date">Cosmetic</span> sẽ nhận được các chương trình ưu đãi và khuyến mãi hấp dẫn:</p>
                 <p>- Mua sắm trực tuyến <span class="benefits__nolimit">KHÔNG GIỚI HẠN</span> số lượng sản phẩm.</p>
                 <p>- Miễn trừ phí vận chuyển lên đến <span class="benefits__fee">99,000 VNĐ</span>.</p>
                 <p>- Nhận thông báo về thông tin đơn hàng qua email và số điện thoại.</p>
-                <p>Hãy nhanh tay đăng ký trở thành thành viên của K42Shop ngay hôm nay !</p>
+                <p>Hãy nhanh tay đăng ký trở thành thành viên của chúng tôi ngay hôm nay !</p>
                 <a asp-controller="User" asp-action="Login">Đăng ký ngay bây giờ</a>
             </div>
 
