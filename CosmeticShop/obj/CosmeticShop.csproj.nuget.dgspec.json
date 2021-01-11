@@ -82,6 +82,10 @@
               "target": "Package",
               "version": "[2.2.3, )"
             },
+            "PayPal": {
+              "target": "Package",
+              "version": "[1.9.1, )"
+            },
             "RestSharp.Newtonsoft.Json": {
               "target": "Package",
               "version": "[1.5.1, )"

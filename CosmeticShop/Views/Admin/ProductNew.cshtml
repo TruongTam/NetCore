@@ -65,7 +65,7 @@
                     <input asp-for="@Model.Thumbnail" type="file" class="custom-file-input form-control" />
                     <label class="custom-file-label" asp-for="@Model.Thumbnail">Ảnh sản phẩm</label>
                     <script>
-                        // Hiển thị tên file đang được chọn
+                        // Hiển thị tên file 
                         $(".custom-file-input").on("change", function () {
                             var fileName = $(this).val().split("\\").pop();
                             $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
